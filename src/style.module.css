@@ -1,0 +1,65 @@
+.select-container {
+    @apply 
+        h-screen
+        flex
+        flex-col
+        w-full;
+}
+
+.select-container__logo {
+    @apply
+        w-[400px]
+        mx-auto;
+}
+
+.select-container__select {
+    @apply
+        w-[480px]
+        mx-auto;    
+}
+
+.select-container__short-cuts {
+    @apply
+        self-end
+        flex
+        pb-10
+        mt-auto
+        mx-auto;
+}
+
+.short-cuts__items {
+    @apply 
+        px-4
+        flex;
+}
+
+.short-cuts__items span {
+    @apply
+        mr-1
+        rounded-lg
+        bg-lime-900
+        text-lime-600
+        text-center
+        leading-4
+        border-lime-600
+        border
+        border-b-4
+        min-w-6
+        flex
+        justify-center
+        items-center
+        py-2
+        px-2
+        h-6;
+}
+
+.short-cuts__items span i {
+    @apply text-sm
+}
+
+.short-cuts__items p {
+    @apply 
+        pl-2
+        text-lime-600
+}
+

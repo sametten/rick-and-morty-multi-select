@@ -1,0 +1,127 @@
+.result-item__body {
+    @apply 
+        flex
+        select-none
+        cursor-pointer
+        p-3
+        my-0.5
+        items-center
+        justify-center
+        w-full
+        rounded-md
+        transition-all
+        duration-300;
+}
+
+.result-item__body--active {
+    @apply
+        bg-lime-800
+}
+
+.result-item__body--active.result-item__body--selected {
+    @apply
+        bg-lime-600
+}
+
+.result-item__body--selected {
+    @apply
+        bg-lime-700
+        hover:bg-lime-700;
+}
+
+.body__selected {
+    @apply
+        w-6
+        h-6
+        flex
+        justify-center
+        items-center
+        text-white
+        border-lime-600
+        rounded-md
+        border
+        duration-300
+        transition-all
+        ring-0
+        ring-lime-600
+        ring-offset-lime-600
+}
+
+.result-item__body--active .body__selected {
+    @apply
+        ring-lime-500
+        ring-1
+        ring-offset-1
+}
+
+.result-item__body--active:active .body__selected {
+    @apply
+        ring-offset-0
+}
+
+.result-item__body--selected .body__selected {
+    @apply bg-white
+        !text-lime-600
+        ring-1
+        ring-lime-500;
+}
+
+.body__selected svg {
+    @apply
+        duration-300
+        transition-opacity
+        opacity-0
+        w-5
+        h-5
+}
+
+.result-item__body--selected svg {
+    @apply opacity-100
+}
+
+.body__image {
+    @apply 
+        block
+        w-16
+        h-16
+        ml-3
+        bg-slate-400
+        flex-shrink-0
+        rounded-md;
+}
+
+.body__info {
+    @apply
+        ml-3
+        flex
+        justify-center
+        flex-col
+        flex-grow;
+}
+
+.body__info h6 {
+    @apply
+        text-white
+        text-base
+        font-bold;
+}
+
+.body__info h6 mark {
+    @apply
+        bg-cyan-500
+        text-black
+}
+
+.body__info p {
+    @apply
+        duration-300
+        transition-colors
+        text-lime-600
+        text-sm
+}
+.result-item__body--selected p,
+.result-item__body--active p {
+    @apply 
+        text-lime-500;
+}
+

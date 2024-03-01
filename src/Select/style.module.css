@@ -1,0 +1,79 @@
+/* Main */
+.select {
+    @apply
+        cursor-text
+        w-[480px]
+        relative
+        shadow-xl
+        transition-all
+        duration-300
+        rounded-md
+        bg-lime-900
+}
+
+/* Input */
+.select__input {
+    @apply 
+        pt-3
+        pb-2
+        px-3
+        flex
+        flex-wrap
+}
+
+.select__input > div {
+    @apply
+        mr-1
+        mb-1
+}
+
+.select__input > div:last-child {
+    @apply mr-0;
+}
+
+/* Result */
+.select__result {
+    @apply
+        bg-lime-900
+        absolute
+        top-[calc(100%-0.25rem)]
+        left-0
+        w-full
+        border-t
+        pt-3
+        pb-2
+        px-3
+        rounded-b-md
+        max-h-[320px]
+        overflow-y-auto
+        border-lime-800
+}
+
+/* No result */
+.select__no-result {
+    @apply
+        bg-lime-900
+        absolute
+        top-[calc(100%-0.25rem)]
+        left-0
+        w-full
+        border-t
+        flex
+        justify-center
+        items-center
+        pt-10
+        pb-10
+        px-3
+        rounded-b-md
+        h-[100px]
+        overflow-y-auto
+        border-lime-800
+}
+
+.select__no-result p {
+    @apply
+        italic
+        text-sm
+        font-semibold
+        text-lime-600
+}

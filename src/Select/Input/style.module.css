@@ -1,0 +1,40 @@
+.select-input {
+    @apply
+        relative
+        ml-2;
+}
+
+.select-input--empty .select-input__input {
+    @apply 
+        w-auto
+        placeholder:text-lime-600;
+}
+
+.select-input__fake {
+    @apply
+        opacity-0
+        absolute
+        -top-3
+        bg-red-500
+        left-0
+        -z-10
+        text-base
+        font-bold
+}
+
+.select-input__input {
+    @apply
+        w-2
+        !py-1
+        pr-1
+        ring-0
+        text-base
+        font-bold
+        bg-transparent
+        outline-none
+        text-lime-50
+        placeholder:text-transparent
+        placeholder:font-semibold
+        placeholder:italic
+        placeholder:text-sm
+}

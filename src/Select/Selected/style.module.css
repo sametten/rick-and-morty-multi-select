@@ -1,0 +1,44 @@
+.select__selected {
+    @apply
+        flex
+        cursor-default
+        justify-center
+        items-center
+        text-base
+        pl-2
+        pr-1
+        py-1
+        text-white
+        rounded-lg
+        bg-lime-800;
+}
+
+.select__selected a {
+    @apply
+        p-0
+        flex
+        justify-center
+        items-center
+        text-sm
+        transition-all
+        duration-300
+        hover:ring-2
+        hover:active:ring-offset-1
+        rounded-full
+        font-bold
+        cursor-pointer
+        select-none
+        w-5
+        h-5
+        ml-2
+        !text-lime-600
+        hover:!text-lime-500
+        hover:ring-lime-600
+        ring-offset-lime-700
+}
+
+.select__selected svg {
+    @apply
+        w-5
+        h-5;
+}
