@@ -1,7 +1,7 @@
 import styles from './style.module.css';
 import Close from "@/assets/close.svg?react";
 
-import type { Character }  from "./types";
+import type { Character }  from "../SelectTypes";
 
 interface Props {
   char: Character,

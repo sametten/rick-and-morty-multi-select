@@ -3,7 +3,7 @@ import Highlighter from "react-highlight-words";
 import styles from './style.module.css';
 import SelectedSvg from "@/assets/selected.svg?react";
 
-import type { Character }  from "./types";
+import type { Character }  from "../SelectTypes";
 
 interface Props {
     char: Character
@@ -38,7 +38,7 @@ const Result = (props: Props) => {
                 </div>
                 <img src={props.char.image} className={styles["body__image"]} />
                 <div className={styles["body__info"]}>
-                    <h6><Highlighter textToHighlight={props.char.name} autoEscape={true} searchWords={[props.char.highlight]}/></h6>
+                    <h6><Highlighter textToHighlight={props.char.name} autoEscape={true} searchWords={[props.highlight]}/></h6>
                     <p>{`${props.char.episode} Episode`}</p>
                 </div>
             </a>

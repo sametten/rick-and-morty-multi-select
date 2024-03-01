@@ -5,9 +5,7 @@ import Selected from './Selected'
 import Input from './Input';
 import Result from './Result';
 
-import type { Character }  from "./types";
-
-import RickAndMortyLogo from "../../public/r&m.png";
+import type { Character }  from "./SelectTypes";
 import styles from "./style.module.css";
 
 const Select = () => {
@@ -20,13 +18,13 @@ const Select = () => {
     }
 
     useEffect(() => {
-        const documentClick = (e: React.MouseEvent<HTMLElement>) => {
-            if (selectRef.current && !selectRef.current.contains(e.target)) 
+        const documentClick = (e: MouseEvent) => {
+            if (e && selectRef.current && !selectRef.current.contains(e?.target as Node)) 
                 closeResults()
         }
 
-        document.addEventListener("mousedown", documentClick);
-        return () => document.removeEventListener("mousedown", documentClick);
+        document.addEventListener("mousedown", (e) => documentClick(e));
+        return () => document.removeEventListener("mousedown", (e) => documentClick(e));
     }, [selectRef])
 
 
@@ -40,7 +38,7 @@ const Select = () => {
         setInputActive(true);
     }
     const inputBlur = () => {
-        document?.activeElement?.blur(); 
+        (document?.activeElement as HTMLElement).blur(); 
         setInputActive(false);
     }
 
@@ -132,7 +130,7 @@ const Select = () => {
 
     
     const arrrowScroll = (newIndex: number) => {
-            resultsWrapperRef.current?.childNodes[newIndex]
+            (resultsWrapperRef.current?.childNodes[newIndex] as HTMLElement)
                 .scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
     }
 
